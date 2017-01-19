@@ -1,0 +1,1 @@
+1/19 Today, we uninstalled mySQL and installed postgreSQL. Then we made a new user and created a new database with 4 entities: Actors, TV Series, Networks, and Awards. 
