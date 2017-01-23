@@ -1,1 +1,1 @@
-1/19 Today, we uninstalled mySQL and installed postgreSQL. Then we made a new user and created a new database with 4 entities: Actors, TV Series, Networks, and Awards. 
+1/23 Today, we learned how to write triggers and functions that can autofill information in the database. This will save us a lot of time in the future :)))) 
