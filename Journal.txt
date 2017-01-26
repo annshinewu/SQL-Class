@@ -1,1 +1,1 @@
-1/23 Today, we learned how to write triggers and functions that can autofill information in the database. This will save us a lot of time in the future :)))) 
+1/26 Today, we worked on finishing the TV series project from last class and also installing/downloading raspbian that will be used for rasberry pi.
