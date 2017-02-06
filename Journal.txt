@@ -1,1 +1,1 @@
-1/26 Today, we worked on finishing the TV series project from last class and also installing/downloading raspbian that will be used for rasberry pi.
+2/6 Today we learned a little bit of the HTML language, then we worked on making a website for entry forms of our TV series database. 
