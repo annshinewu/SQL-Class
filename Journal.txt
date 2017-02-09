@@ -1,1 +1,1 @@
-2/6 Today we learned a little bit of the HTML language, then we worked on making a website for entry forms of our TV series database. 
+2/9 Today, we worked on CSS lessons on code academy. Then we used an already written CSS style and applied it to our own HTML webpage. 
