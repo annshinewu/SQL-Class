@@ -1,1 +1,1 @@
-2/16 While others worked on the installation of the Rasberry Pi, I worked on the lessons on PHP on Code Academy. THE LESSONS ARE TOO LONG. THE END :) 
+2/20 We learned how to connect our sql database with php along with html and css. We utilized classtime to complete the assigmnent to create a table for our favorite teachers. 
