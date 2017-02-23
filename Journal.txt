@@ -1,1 +1,1 @@
-2/20 We learned how to connect our sql database with php along with html and css. We utilized classtime to complete the assigmnent to create a table for our favorite teachers. 
+2/23 While the class worked on connecting our database to PHP, I worked on connecting my database to the raspberry pi. 
