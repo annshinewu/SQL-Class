@@ -1,1 +1,1 @@
-2/23 While the class worked on connecting our database to PHP, I worked on connecting my database to the raspberry pi. 
+3/2 Our class worked on connecting our database to accept the entries inserted on the website using PHP and then displaying the inserted information on the website once submitted. 
