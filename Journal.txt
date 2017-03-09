@@ -1,1 +1,1 @@
-3/6 Today we worked on fixing the various problems with our individual websites. The objective for everyone was to allow an error page to be displayed when users try to insert the same data in the database.
+3/9 Today we worked on login and register pages for the website. We also protected the inserted passwords by encrypting them first. 
