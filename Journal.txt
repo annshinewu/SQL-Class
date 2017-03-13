@@ -1,1 +1,1 @@
-3/9 Today we worked on login and register pages for the website. We also protected the inserted passwords by encrypting them first. 
+3/13 Today we worked on the login and register pages. For the register page, you have to first check if the user is already registered, if so, you will direct the user to another page that shows that the information has already been submitted. For the login page, you will check whether the person already has a registered account, if not, you will direct the uesr to the register page.
