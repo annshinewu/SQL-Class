@@ -1,22 +1,14 @@
 <?php
 $cookie_name = "login";
 $cookie_name2 = "check";
-echo $_COOKIE[$cookie_name2];
 #if(!isset($_COOKIE[$cookie_name2])){
     if(isset($_COOKIE[$cookie_name]))  {
         $name = $_GET["name"];
         $email = $_GET["email"];
-        #echo "success";
     }
-    #else {
-        #header('location: index.html#tologin');
-        #echo 'first';
-        #exit;
-    #}
 #}
 else {
     header('location: index.html#tologin');
-    #echo 'second';
     exit;
 }
 
@@ -38,6 +30,7 @@ $connection = pg_connect ("host= localhost dbname= postgres user= postgres passw
 <html>
 <head>
     <link type="text/css" rel="stylesheet" href="tablestylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="css/button.css"/>
 </head>
 <body>
 <div id="container">
@@ -60,7 +53,12 @@ $connection = pg_connect ("host= localhost dbname= postgres user= postgres passw
         #SELECT firstname, lastname, address, label, username, email, secondEmail, lastUpdate from profile INNER JOIN department USING (dep_id) WHERE username = 'annshinewu' AND email = 'annshinewu@pacificamerican.org' ORDER BY lastUpdate DESC LIMIT 1;
         $profile = pg_query("SELECT firstname, lastname, address, label, username, email, secondEmail, lastUpdate from profile INNER JOIN department USING (dep_id) WHERE username = '$name' AND email = '$email' ORDER BY lastUpdate DESC LIMIT 1;");
         $value = pg_fetch_result($profile, 0, 0);
-        if(!$value){
+        $value1 = pg_fetch_result($profile, 0, 1);
+        $value2 = pg_fetch_result($profile, 0, 2);
+        $value3 = pg_fetch_result($profile, 0, 3);
+        $value4 = pg_fetch_result($profile, 0, 6);
+        if(!$value AND !$value1 AND !$value2 AND !$value3 AND !$value4){
+        #if(!$value){
             echo "<tr>\n";
             echo "<td>", "", "</td>",
             "<td>", "", "</td>",
@@ -95,7 +93,7 @@ $connection = pg_connect ("host= localhost dbname= postgres user= postgres passw
     </p>
     </form>
     <form class = "form-style-5" action="logout.php" method = post>
-    <p class="edit button">
+    <p class="back button">
             <input type="submit" value="Back"/>
     </p>
     </form>
