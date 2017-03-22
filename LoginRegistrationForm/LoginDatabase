@@ -1,0 +1,35 @@
+DROP TABLE IF EXISTS department CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
+DROP TABLE IF EXISTS profile CASCADE;
+
+CREATE TABLE department(
+    dep_id INTEGER PRIMARY KEY NOT NULL,
+    label VARCHAR(40) NOT NULL
+);
+CREATE TABLE users(
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50),
+    email VARCHAR(50),
+    password VARCHAR(50)
+);
+
+CREATE TABLE profile(
+    profile_id SERIAL PRIMARY KEY,
+    id INTEGER,
+    username VARCHAR(50),
+    email VARCHAR(50),
+    secondEmail VARCHAR(50),
+    firstname VARCHAR(50),
+    lastname VARCHAR(50),
+    address VARCHAR(50),
+    dep_id INTEGER,
+    lastUpdate VARCHAR(50),
+    FOREIGN KEY (id) REFERENCES users (id),
+    FOREIGN KEY (dep_id) REFERENCES department (dep_id)
+);
+
+INSERT INTO department VALUES (1, 'English');
+INSERT INTO department VALUES (2, 'Math');
+INSERT INTO department VALUES (3, 'Computer Science');
+INSERT INTO department VALUES (4, 'Art');
+INSERT INTO department VALUES (5, 'Social Studies');
