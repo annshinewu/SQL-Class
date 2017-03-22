@@ -8,13 +8,14 @@ if($connection) {
 } else {
     echo 'there has been an error connecting';
 }
+$user = $_POST["usernamesignup"];
 
-$query1 = "SELECT username FROM users WHERE username = '$POST[usernamesignup]'";
-$query2 = "SELECT email FROM users WHERE email = '$POST[emailsignup]'";
+$query1 = "SELECT username FROM users WHERE username = '$user'";
+$query2 = "SELECT email FROM users WHERE email = '$_POST[emailsignup]'";
 
 $result = true;
 
-$usernameExist = pg_fetch_row(pg_query($query1));
+$usernameExist = pg_fetch_result(pg_query($query1),0,0);
 $emailExist = pg_fetch_row(pg_query($query2));
 if(($usernameExist[0]) || ($emailExist[0])){
     $result = false;
@@ -29,7 +30,7 @@ if (!$result) {
     exit;
 }
 else{
-    header('location: welcome.html');
+    header('location: index.html#tologin');
 }
 
 ?>
