@@ -14,6 +14,7 @@ while($row = pg_fetch_array($result))
 {
     $options = $options."<option>$row[label]</option>";
 }
+
 pg_close($connection)
 ?>
 
@@ -26,7 +27,7 @@ pg_close($connection)
 </head>
 <body>
 <h1> Profile Edit Form: </h1>
-<form class = "form-style-5" action="welcome.php" method = post>
+<form class = "form-style-5" action="results.php" method = post>
     <br> First Name: <br>
     <input type= "text" name="firstName">
     <br> Last Name: <br>
