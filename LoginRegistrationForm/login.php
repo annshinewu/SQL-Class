@@ -11,20 +11,21 @@ if($connection) {
 $name = $_POST['username'];
 $pass = $_POST['password'];
 
-$query = "SELECT username FROM users WHERE username = '$name' AND password = crypt('$pass', password);";
+$query = "SELECT username, email FROM users WHERE username = '$name' AND password = crypt('$pass', password);";
 
 $result = pg_fetch_row(pg_query($query));
 
 if(!$result){
     header('location: index.html#toregister');
     exit;
-} else{
+}
+else{
     $cookie_name = "login";
-    $cookie_value = "True";
-    setcookie($cookie_name, $cookie_value, time() + (120), "/");
-    $name = $_GET["name"];
-    $email = $_GET["email"];
-    header('location: welcome.php'."?name=".$name."&email=".$email);
+    $cookie_value = "true";
+    setcookie($cookie_name, $cookie_value, time() + (5), "/");
+    $email = $result[1];
+    header("location: welcome.php"."?name=".$name."&email=".$email);
 }
 
 ?>
+
