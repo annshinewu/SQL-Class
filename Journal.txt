@@ -1,1 +1,1 @@
-3/20 Today we worked independently on our midterm project. I have completed displaying the profiles table and now I am working on allowing the users to edit the profile table. 
+3/22 I worked on the logout button and fixing various small bugs in my code. CONCLUSION: I FINALLY FINISHED MY MIDTERM PROJECT. YAY :D :D 
