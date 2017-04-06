@@ -1,1 +1,1 @@
-3/22 I worked on the logout button and fixing various small bugs in my code. CONCLUSION: I FINALLY FINISHED MY MIDTERM PROJECT. YAY :D :D 
+4/6 Today we learned about functions in the postgre language. Our homework is to complete a function that returns the average and total for an array input integer. 
