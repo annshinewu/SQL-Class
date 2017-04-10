@@ -1,1 +1,1 @@
-4/6 Today we learned about functions in the postgre language. Our homework is to complete a function that returns the average and total for an array input integer. 
+4/10 We worked with functions and loops today and then we had 3 tasks to complete in class. I finished the first two but then I am having trouble with the third task which asks us to allow the user to enter several grades for a single student simultaneously.
