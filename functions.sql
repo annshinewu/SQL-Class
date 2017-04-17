@@ -271,7 +271,8 @@ CREATE OR REPLACE FUNCTION insertMulGrades(studentId INTEGER, date DATE, Variadi
 
 SELECT * FROM individual;
 
-SELECT insertMulGrades(1, '9/4/2017', 80, 70, 81,90);
+SELECT insertMulGrades(1, '17/4/2017', 80, 70, 81,90);
+
 
 SELECT * FROM scores;
 
@@ -331,9 +332,27 @@ CREATE OR REPLACE FUNCTION curve(VARIADIC inputs NUMERIC[]) RETURNS FLOAT AS
         sum := sum + num;
       END IF;
     END LOOP;
-    RETURN (85- (sum / count));
+    IF(85-(sum/count) < 0) THEN
+      RAISE NOTICE 'The average of the class is % and it is higher than 85 so there is no need for a curve', (sum/count);
+      RETURN 0;
+    ELSE
+      RETURN (85- (sum / count));
+    END IF;
   END;
   $$ LANGUAGE plpgsql;
 
 SELECT * FROM curve(50, 50, 50, 75, 90);
+SELECT * FROM curve(50,50,50,90);
 
+CREATE OR REPLACE FUNCTION curveScore(day DATE) RETURNS FLOAT AS
+  $$
+  DECLARE
+    colnames INTEGER ARRAY;
+  BEGIN
+  colnames := array(SELECT score FROM scores WHERE date = day);
+  RETURN curve(VARIADIC colnames);
+  END;
+  $$ LANGUAGE plpgsql;
+
+SELECT * FROM scores;
+SELECT * FROM curveScore('2017-04-17');
