@@ -1,1 +1,3 @@
-4/17 Today, we continued working and testing task 5. First, we had to apply the function to a general case. Then, we created another function to apply that function to our database. After we all finished our functions, we had 2 presentations from Joseph and Clement.
+4/20
+Today we finished the presentations for Alex, Andrew, Sabrina, and myself.
+Alex had a function to calculate the standard deviation. Andrew had a function to find whether a student is improving or not. Sabrina had a function to find the number of test scores below 60.
