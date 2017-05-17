@@ -44,4 +44,20 @@ CREATE TABLE IF NOT EXISTS courseList(
   studentID INT
 );
 
-INSERT INTO users (username, password, categoryID) VALUES ('annshinewu', 'annshine', 1);
+SELECT * FROM users;
+
+CREATE OR REPLACE FUNCTION registerStudents(Variadic inputs VARCHAR []) RETURNS VOID AS
+  $$
+  DECLARE
+    r TEXT;
+    pass INTEGER;
+  BEGIN
+    FOR r IN SELECT unnest(inputs)
+    LOOP
+      pass := ROUND(RANDOM()*1000);
+      INSERT INTO users (username, password, categoryID) VALUES (r, pass, 1);
+    END LOOP;
+  END;
+  $$ LANGUAGE plpgsql;
+
+SELECT * FROM registerStudents('annshinewu', 'andrewyeh', 'sabrinaho');
