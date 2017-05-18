@@ -1,3 +1,2 @@
-4/20
-Today we finished the presentations for Alex, Andrew, Sabrina, and myself.
-Alex had a function to calculate the standard deviation. Andrew had a function to find whether a student is improving or not. Sabrina had a function to find the number of test scores below 60.
+5/18
+Today our group (Sabrina, Andrew, and I) finished our presentation for the social media network PASNote that we created. For the website, we allowed users to login to the home page which directs them to various school posts and/or the classes they take. The users can also update their profile information to display accurate and current information. 
