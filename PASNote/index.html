@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="loginStyle.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>PASNote-Login</title>
+</head>
+<body>
+<div id="container">
+    <div class="login">
+        <h1>Login</h1>
+        <!--Changed-->
+        <form  action="login.php" autocomplete="on" method = "post">
+            <input type="text" name="username" placeholder="Username" required="required" />
+            <input type="password" name="password" placeholder="Password" required="required" />
+            <button type="submit" class="btn btn-primary btn-block btn-large" onclick="#">Let me in.</button>
+        </form>
+        <!--Changed-->
+    </div>
+    <div id="intro"><h1 id="PASNote"><center>PASNote</center></h1>
+        <div id="middleimage" align="center"><img src="logo1.png"></div>
+        <h1 id="instruct"><center>Place your mouse here<br>to login</center></h1>
+    </div>
+</div>
+
+<div class="dropdown1">
+    <button class="dropbtn1">About</button>
+    <div class="dropdown-content1">
+        <p class="desc1">PASNote is a social network specifically designed for
+            the students, teachers, and alumnus of Pacific American
+            School. PASNote provides the platform to connect our
+            audience for school announcements and STUCO events,
+            as well as homework Q&A and college application advice.<br><br>
+            Team:<br>Andrew Yeh: Front-end Programmer<br>
+            <br>Sabrina Ho: Front-end&Back-end Programmer<br>
+            <br>Annshine Wu: Back-end Programmer</p>
+    </div>
+</div>
+</body>
+</html>

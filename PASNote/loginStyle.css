@@ -1,0 +1,161 @@
+#PASNote {
+    font: 60px "Segoe Script";
+    margin: 0;
+    font-weight: 900;
+}
+
+#instruct {
+    position: relative;
+    font-family: Calibri;
+    margin: 2px;
+    -webkit-transition:0.8s;
+    transition:0.8s;
+    -webkit-animation: flash 1s infinite;
+}
+
+@keyframes flash {
+0% {transform: scale(1.0);
+    -webkit-transform: scale(1.0);}
+50% {transform: scale(1.1);
+    -webkit-transform: scale(1.1);}
+100% {transform: scale(1.0);
+    -webkit-transform: scale(1.0);}
+}
+
+.desc1 {
+    font: 20px Calibri;
+    text-align: left;
+    color: white;
+}
+
+img
+{
+    width:360px;
+    height:380px;
+    margin: 0 auto;
+    display: block;
+}
+
+.dropbtn1 {
+    background: mediumpurple;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0, 0.4);
+    color: white;
+    padding: 16px;
+    margin: 2px;
+    font: 20px Raleway;
+    border: none;
+    cursor: pointer;
+    border-radius: 8%;
+}
+.dropdown1 {
+    top:3%;
+    left:5%;
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content1 {
+    visibility: hidden; /* hides sub-menu */
+    opacity: 0;
+    position: absolute;
+    top: 97%;
+    left: -3%;
+    width: 400px;
+    z-index: -1;
+    background-color: rebeccapurple;
+    box-shadow:  0px 8px 5px rgba(0,0,0, 0.6);
+}
+.dropdown-content1 .desc1 {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-align: start;
+    display: block;
+    width: 400px;
+    background-color: black;
+}
+.dropdown1:hover .dropdown-content1 {
+    visibility: visible; /* shows sub-menu */
+    opacity: 1;
+    z-index: 1;
+}
+.dropdown1:hover .dropbtn1 {
+    background: rebeccapurple;
+    transform: scale(1.1);
+}
+
+#container {
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    height: 100%;
+    width: 430px;
+    left: 35%;
+    right: 50%;
+    text-align: center;
+    background: rgba(60, 130, 250, 0.95);
+    background: radial-gradient(rgba(255, 255, 255, 0.8) 22%, rgba(60, 100, 255, 1));
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5 );
+    position: fixed;
+    perspective: 800px;
+    z-index: 1;
+    -webkit-transition:0.8s;
+    transition:0.8s;
+    -webkit-animation: pulse 2s infinite;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+@-webkit-keyframes pulse{
+    0%{		box-shadow:0 2px 2px rgba(0,0,0,0.8);}
+    50%{	box-shadow:0 2px 15px rgba(150,200,150,255.8 );}
+    100%{	box-shadow:0 2px 2px rgba(0,0,0,0.8 );}
+}
+
+.login, #container #intro {
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition:0.8s;
+}
+#intro {
+    -webkit-animation: pulse 2s infinite;
+    z-index: 2;
+}
+.login {
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+#container:hover {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    background: radial-gradient(darkslateblue 40%, cadetblue);
+}
+
+#container:hover #instruct {
+    -webkit-animation: flash 0s infinite;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-image:  url("graduate.JPG"), url("school.JPG");
+    background-color: #050130;
+    background-size: 50%, 50%;
+    background-position: left, right;
+    background-repeat: no-repeat;
+}
+
+
+
+
